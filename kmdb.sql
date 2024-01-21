@@ -118,6 +118,7 @@
 .print "======"
 .print ""
 
+
 -- The SQL statement for the movies output
 -- TODO!
 
@@ -130,3 +131,70 @@
 
 -- The SQL statement for the cast output
 -- TODO!
+---STARTED writing code (Ankush)
+DROP TABLE IF EXISTS movies;
+DROP TABLE IF EXISTS studio;
+DROP TABLE IF EXISTS role;
+DROP TABLE IF EXISTS actor;
+
+CREATE TABLE movies (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    title TEXT, 
+    year_released TEXT, 
+    MPAA TEXT,
+    studio_id INTEGER,
+    actor_id INTEGER
+); 
+
+CREATE TABLE studio (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    studio_name TEXT
+); 
+
+CREATE TABLE role (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    character_first_name TEXT,
+    character_last_name TEXT, 
+    movie_id INTEGER
+);
+
+CREATE TABLE actor (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    actor_first_name TEXT,
+    actor_last_name TEXT,
+    movie_id INTEGER, 
+    role_id INTEGER
+); 
+
+INSERT INTO movies (
+    title,
+    year_released,
+    MPAA
+)
+VALUES (
+    "Batman Begins",
+    "2005",
+    "PG-13"
+);
+
+INSERT INTO movies (
+    title,
+    year_released,
+    MPAA
+)
+VALUES (
+    "Dark Knight",
+    "2008",
+    "PG-13"
+);
+
+INSERT INTO movies (
+    title,
+    year_released,
+    MPAA
+)
+VALUES (
+    "Dark Knight Rises",
+    "2012",
+    "PG-13"
+);
