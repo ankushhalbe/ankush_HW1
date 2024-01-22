@@ -131,19 +131,18 @@
 
 -- The SQL statement for the cast output
 -- TODO!
----STARTED writing code (Ankush)
+---STARTED writing code (ANKUSH HALBE)
 DROP TABLE IF EXISTS movies;
 DROP TABLE IF EXISTS studio;
 DROP TABLE IF EXISTS role;
 DROP TABLE IF EXISTS actor;
-
+--CREATE
 CREATE TABLE movies (
     id INTEGER PRIMARY KEY AUTOINCREMENT, 
     title TEXT, 
     year_released TEXT, 
     MPAA TEXT,
-    studio_id INTEGER,
-    actor_id INTEGER
+    studio_id INTEGER
 ); 
 
 CREATE TABLE studio (
@@ -155,53 +154,166 @@ CREATE TABLE role (
     id INTEGER PRIMARY KEY AUTOINCREMENT, 
     character_first_name TEXT,
     character_last_name TEXT, 
-    movie_id INTEGER
+    movie_id INTEGER, 
+    actor_id INTEGER
 );
 
 CREATE TABLE actor (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     actor_first_name TEXT,
-    actor_last_name TEXT,
-    movie_id INTEGER, 
-    role_id INTEGER
+    actor_last_name TEXT 
 ); 
 
-INSERT INTO movies (
-    title,
-    year_released,
-    MPAA
-)
-VALUES (
-    "Batman Begins",
-    "2005",
-    "PG-13"
-);
-
-INSERT INTO movies (
-    title,
-    year_released,
-    MPAA
-)
-VALUES (
-    "Dark Knight",
-    "2008",
-    "PG-13"
-);
-
-INSERT INTO movies (
-    title,
-    year_released,
-    MPAA
-)
-VALUES (
-    "Dark Knight Rises",
-    "2012",
-    "PG-13"
-);
-
+--INSERT
 INSERT INTO studio(
     studio_name
 )
 VALUES (
     "Warner Bros."
 ); 
+-- studio # 1
+
+INSERT INTO movies (
+    title,
+    year_released,
+    MPAA,
+    studio_id
+)
+VALUES (
+    "Batman Begins",
+    "2005",
+    "PG-13", 
+    1
+);
+--movie1
+
+INSERT INTO movies (
+    title,
+    year_released,
+    MPAA, 
+    studio_id
+)
+VALUES (
+    "Dark Knight",
+    "2008",
+    "PG-13", 
+    1
+);
+
+INSERT INTO movies (
+    title,
+    year_released,
+    MPAA, 
+    studio_id
+)
+VALUES (
+    "Dark Knight Rises",
+    "2012",
+    "PG-13", 
+    1
+);
+
+INSERT INTO role (
+    character_first_name,
+    character_last_name, 
+    movie_id, 
+    actor_id
+)
+VALUES (
+    "Bruce",
+    "Wayne"
+);
+
+INSERT INTO role (
+    character_first_name
+    
+)
+VALUES (
+    "Alfred"
+);
+
+INSERT INTO role (
+    character_first_name,
+    character_last_name
+)
+VALUES (
+    "Ra's",
+    "Al Ghul"
+);
+
+INSERT INTO role (
+    character_first_name,
+    character_last_name
+)
+VALUES (
+    "Rachel",
+    "Dawes"
+);
+
+INSERT INTO role (
+    character_first_name,
+    character_last_name
+)
+VALUES (
+    "Commissioner",
+    "Gordon"
+);
+
+INSERT INTO role (
+    character_first_name
+)
+VALUES (
+    "Joker"
+);
+
+INSERT INTO role (
+    character_first_name,
+    character_last_name
+)
+VALUES (
+    "Harvey",
+    "Dent"
+);
+
+INSERT INTO role (
+    character_first_name
+)
+VALUES (
+    "Bane"
+);
+
+INSERT INTO role (
+    character_first_name,
+    character_last_name
+)
+VALUES (
+    "John",
+    "Blake"
+);
+
+INSERT INTO role (
+    character_first_name,
+    character_last_name
+)
+VALUES (
+    "Selina",
+    "Kyle"
+);
+.print "Movies"
+
+.print "======"
+
+.print ""
+--SELECT (table 1)
+SELECT movies.title, movies.year_released, movies.MPAA, studio.studio_name FROM movies
+INNER JOIN studio ON movies.studio_id = studio.id;
+
+.print "Top Cast"
+
+.print "======"
+
+.print ""
+--SELECT (table 2)
+SELECT movies.title, actor.actor_first_name, actor.actor_last_name, role.character_first_name, role.character_last_name FROM role
+INNER JOIN actor ON actor.id = role.actor_id
+INNER JOIN movies ON movies.id = role.movie_id;
