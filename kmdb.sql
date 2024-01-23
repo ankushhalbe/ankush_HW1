@@ -194,7 +194,7 @@ INSERT INTO movies (
     studio_id
 )
 VALUES (
-    "Dark Knight",
+    "The Dark Knight",
     "2008",
     "PG-13", 
     1
@@ -207,10 +207,109 @@ INSERT INTO movies (
     studio_id
 )
 VALUES (
-    "Dark Knight Rises",
+    "The Dark Knight Rises",
     "2012",
     "PG-13", 
     1
+);
+
+INSERT INTO actor (
+    actor_first_name,
+    actor_last_name
+)
+VALUES (
+    "Christian", 
+    "Bale"
+);
+
+INSERT INTO actor (
+    actor_first_name,
+    actor_last_name
+)
+VALUES (
+    "Micheal", 
+    "Caine"
+);
+
+INSERT INTO actor (
+    actor_first_name,
+    actor_last_name
+)
+VALUES (
+    "Liam", 
+    "Neeson"
+);
+
+INSERT INTO actor (
+    actor_first_name,
+    actor_last_name
+)
+VALUES (
+    "Katie", 
+    "Holmes"
+);
+
+INSERT INTO actor (
+    actor_first_name,
+    actor_last_name
+)
+VALUES (
+    "Gary", 
+    "Oldman"
+);
+
+INSERT INTO actor (
+    actor_first_name,
+    actor_last_name
+)
+VALUES (
+    "Heath", 
+    "Ledger"
+);
+
+INSERT INTO actor (
+    actor_first_name,
+    actor_last_name
+)
+VALUES (
+    "Aaron", 
+    "Eckhart"
+); 
+
+INSERT INTO actor (
+    actor_first_name,
+    actor_last_name
+)
+VALUES (
+    "Maggie", 
+    "Gyllenhall"
+);
+
+INSERT INTO actor (
+    actor_first_name,
+    actor_last_name
+)
+VALUES (
+    "Tom", 
+    "Hardy"
+); 
+
+INSERT INTO actor (
+    actor_first_name,
+    actor_last_name
+)
+VALUES (
+    "Joseph", 
+    "Gordon-Levitt"
+);
+
+INSERT INTO actor (
+    actor_first_name,
+    actor_last_name
+)
+VALUES (
+    "Anne", 
+    "Hathaway"
 );
 
 INSERT INTO role (
@@ -221,84 +320,194 @@ INSERT INTO role (
 )
 VALUES (
     "Bruce",
-    "Wayne"
-);
-
-INSERT INTO role (
-    character_first_name
-    
-)
-VALUES (
-    "Alfred"
+    "Wayne", 
+    1,
+    1
 );
 
 INSERT INTO role (
     character_first_name,
-    character_last_name
+    character_last_name, 
+    movie_id, 
+    actor_id
+)
+VALUES (
+    "Alfred",
+    "", 
+    1,
+    2
+);
+
+INSERT INTO role (
+    character_first_name,
+    character_last_name, 
+    movie_id, 
+    actor_id
 )
 VALUES (
     "Ra's",
-    "Al Ghul"
+    "Al Ghul", 
+    1,
+    3
 );
 
 INSERT INTO role (
     character_first_name,
-    character_last_name
+    character_last_name, 
+    movie_id, 
+    actor_id
 )
 VALUES (
     "Rachel",
-    "Dawes"
+    "Dawes", 
+    1,
+    4
 );
 
 INSERT INTO role (
     character_first_name,
-    character_last_name
+    character_last_name, 
+    movie_id, 
+    actor_id
 )
 VALUES (
     "Commissioner",
-    "Gordon"
-);
-
-INSERT INTO role (
-    character_first_name
-)
-VALUES (
-    "Joker"
+    "Gordon", 
+    1,
+    5
 );
 
 INSERT INTO role (
     character_first_name,
-    character_last_name
+    character_last_name, 
+    movie_id, 
+    actor_id
+)
+VALUES (
+    "Bruce",
+    "Wayne", 
+    2,
+    1
+);
+
+INSERT INTO role (
+    character_first_name,
+    character_last_name, 
+    movie_id, 
+    actor_id
+)
+VALUES (
+    "Joker",
+    "", 
+    2,
+    6
+);
+
+INSERT INTO role (
+    character_first_name,
+    character_last_name, 
+    movie_id, 
+    actor_id
 )
 VALUES (
     "Harvey",
-    "Dent"
-);
-
-INSERT INTO role (
-    character_first_name
-)
-VALUES (
-    "Bane"
+    "Dent", 
+    2,
+    7
 );
 
 INSERT INTO role (
     character_first_name,
-    character_last_name
+    character_last_name, 
+    movie_id, 
+    actor_id
+)
+VALUES (
+    "Alfred",
+    "", 
+    2,
+    2
+);
+
+INSERT INTO role (
+    character_first_name,
+    character_last_name, 
+    movie_id, 
+    actor_id
+)
+VALUES (
+    "Rachel",
+    "Dawes", 
+    2,
+    8
+);
+
+INSERT INTO role (
+    character_first_name,
+    character_last_name, 
+    movie_id, 
+    actor_id
+)
+VALUES (
+    "Bruce",
+    "Wayne", 
+    3,
+    1
+);
+
+INSERT INTO role (
+    character_first_name,
+    character_last_name, 
+    movie_id, 
+    actor_id
+)
+VALUES (
+    "Commissioner",
+    "Gordon", 
+    3,
+    5
+);
+
+INSERT INTO role (
+    character_first_name,
+    character_last_name, 
+    movie_id, 
+    actor_id
+)
+VALUES (
+    "Bane",
+    "", 
+    3,
+    9
+);
+
+INSERT INTO role (
+    character_first_name,
+    character_last_name, 
+    movie_id, 
+    actor_id
 )
 VALUES (
     "John",
-    "Blake"
+    "Blake", 
+    3,
+    10
 );
 
 INSERT INTO role (
     character_first_name,
-    character_last_name
+    character_last_name, 
+    movie_id, 
+    actor_id
 )
 VALUES (
     "Selina",
-    "Kyle"
+    "Kyle", 
+    3,
+    11
 );
+
+
 .print "Movies"
 
 .print "======"
