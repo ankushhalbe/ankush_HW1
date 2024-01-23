@@ -511,7 +511,7 @@ VALUES (
 
 .print "Movies"
 
-.print "======"
+.print "======="
 
 .print ""
 --SELECT (table 1)
@@ -522,7 +522,7 @@ INNER JOIN studio ON movies.studio_id = studio.id;
 
 .print "Top Cast"
 
-.print "======"
+.print "======="
 
 .print ""
 --SELECT (table 2)
