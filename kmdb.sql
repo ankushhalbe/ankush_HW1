@@ -507,6 +507,7 @@ VALUES (
     11
 );
 
+.print ""
 
 .print "Movies"
 
@@ -516,6 +517,8 @@ VALUES (
 --SELECT (table 1)
 SELECT movies.title, movies.year_released, movies.MPAA, studio.studio_name FROM movies
 INNER JOIN studio ON movies.studio_id = studio.id;
+
+.print ""
 
 .print "Top Cast"
 
